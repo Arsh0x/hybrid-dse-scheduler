@@ -30,3 +30,49 @@
 - Created architecture diagram `paper/figures/architecture_v1.md`.
 - Formulated concept test `docs/WEEK1_CONCEPT_TEST.md`.
 - Verified all smoke tests and committed `phase-0-complete`.
+
+## 2026-09-19 — QSYM Backend Verified (Milestones 1–3)
+
+### Setup
+- Container: zjuchenyuan/qsym (Ubuntu 16.04 base)
+- Built libqsym.so from source inside container
+- Installed QSYM via `pip install .` (Python 2.7)
+- Volume mount: ~/qsym_workspace <-> /workspace
+
+### Milestone 1: Hybrid Handoff
+- AFL++ 2.52b + QSYM running simultaneously
+- QSYM read seeds from AFL slave queue
+- Generated testcase f2 00 flipped branch -> "Branch A"
+- Evidence: baseline/qsym/milestone_01/
+
+### Milestone 2: Magic Byte Solve
+- Target: DE AD BE EF check
+- QSYM generated id:000003 = DE AD BE EF -> "MAGIC FOUND"
+- Solved via value-set pre-pass (Solver=0s)
+- Evidence: baseline/qsym/milestone_02_magic_solve/
+
+### Milestone 3: Non-Linear Solve
+- Target: buf[0]*buf[1]==0x1234 AND (buf[2]^0xAA)==(buf[3]+5)
+- QSYM generated e9 14 e8 3d -> "PRODUCT OK" + "XOR SUM OK"
+- Both constraints satisfiable; non-linear multiplication solved
+- Evidence: baseline/qsym/milestone_03_z3_nonlinear/
+
+### Critical Finding
+QSYM's stdout logging is too coarse for our scheduler paper:
+- Per-seed, not per-branch granularity
+- Solver time rounded to whole seconds
+- Cannot distinguish value-set pre-pass from actual Z3 invocation
+- PIN temp dirs (/tmp/tmp*/qsym-out-*) are deleted after each run
+
+### Implication
+Must instrument the PIN tool to emit:
+- branch_id (build_id + module-relative offset)
+- solver invocation timestamp + elapsed milliseconds
+- solver result (SAT/UNSAT/TIMEOUT)
+to a persistent append-only log.
+
+This is the next milestone: solver timing hook.
+
+### Next Action
+Instrument /workdir/qsym/qsym/pintool/solver.cpp to write per-query
+timing to a persistent CSV log.
