@@ -76,3 +76,20 @@ This is the next milestone: solver timing hook.
 ### Next Action
 Instrument /workdir/qsym/qsym/pintool/solver.cpp to write per-query
 timing to a persistent CSV log.
+
+## 2026-09-20 — Milestone 4a: Solver Timing Hook
+
+Instrumented /workdir/qsym/qsym/pintool/solver.cpp to write one row
+per Z3 solver invocation to /workspace/logs/solver_timing.csv.
+
+CSV schema v1:
+  schema_version,timestamp_us,result,elapsed_us,pc,cum_solving_time_us
+
+Sample:
+  v1,1789918987610639,SAT,2906,4196317,2906
+  v1,1789918988518217,SAT,541,4196671,3447
+
+Key change: inserted logSolverRow() inside Solver::check() — captures
+every Z3 query with microsecond timing and PC address.
+
+Next: Milestone 4b (stable branch IDs).
