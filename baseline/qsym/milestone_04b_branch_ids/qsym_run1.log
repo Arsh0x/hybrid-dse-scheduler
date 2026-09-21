@@ -1,0 +1,74 @@
+nohup: ignoring input
+DEBUG:qsym.afl:Temp directory=/tmp/tmpbg_jCd
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000003,src:000002,op:havoc,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-0/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-0 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=2 s, Emulation=2 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000005,sync:afl-master,src:000005,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-1/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-1 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=4 s, Emulation=4 s, Solver=0 s, Return=0
+DEBUG:qsym.afl:Creating: out/qsym/queue/id:000000,src:id:000005
+DEBUG:qsym.afl:Creating: out/qsym/queue/id:000001,src:id:000005
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000004,sync:afl-master,src:000004,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-2/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-2 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=4 s, Emulation=4 s, Solver=0 s, Return=0
+DEBUG:qsym.afl:Creating: out/qsym/queue/id:000002,src:id:000004
+DEBUG:qsym.afl:Generate 1 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000002,orig:seed3
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-3/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-3 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=2 s, Emulation=2 s, Solver=0 s, Return=0
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000001,orig:seed2
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-4/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-4 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=2 s, Emulation=2 s, Solver=0 s, Return=0
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=out/afl-slave/queue/id:000000,orig:seed
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmpbg_jCd/qsym-out-5/pin.log -i /workspace/z3_test/out/qsym/.cur_input -s 1 -o /tmp/tmpbg_jCd/qsym-out-5 -l 1 -b out/qsym/bitmap -- ./z3_target
+DEBUG:qsym.afl:Total=2 s, Emulation=2 s, Solver=0 s, Return=0
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files
+DEBUG:qsym.afl:Sleep for getting files

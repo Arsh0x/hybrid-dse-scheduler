@@ -1,0 +1,4 @@
+schema_version,timestamp_us,result,elapsed_us,branch_id,cum_solving_time_us
+v1,1790013057337902,SAT,3058,0e8fd84a25f0fbd0:0x7dd,3058
+v1,1790013058983125,SAT,610,0e8fd84a25f0fbd0:0x93f,3668
+v1,1790013063390031,SAT,583,0e8fd84a25f0fbd0:0x93f,583

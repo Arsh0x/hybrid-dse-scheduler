@@ -93,3 +93,28 @@ Key change: inserted logSolverRow() inside Solver::check() — captures
 every Z3 query with microsecond timing and PC address.
 
 Next: Milestone 4b (stable branch IDs).
+
+## 2026-09-21 — Milestone 4b: Stable Branch IDs
+
+### Achievement
+Branch IDs now stable across runs (ASLR-safe).
+
+Scheme: branch_id = FNV1a64(binary) + ":" + "0x" + (pc - module_base)
+
+### Verification
+Two independent runs produced identical branch IDs:
+  0e8fd84a25f0fbd0:0x7dd
+  0e8fd84a25f0fbd0:0x93f
+
+### CSV Schema v1 (updated)
+schema_version,timestamp_us,result,elapsed_us,branch_id,cum_solving_time_us
+
+### Implementation
+- Patched solver.cpp with getBranchId() and computeBuildIdForPc()
+- Rebuilt libqsym.so, installed to Python package path
+
+### Evidence
+- baseline/qsym/milestone_04b_branch_ids/
+
+### Next
+Milestone 4c: candidate/outcome CSV loggers (feature extraction begins)
