@@ -118,3 +118,16 @@ schema_version,timestamp_us,result,elapsed_us,branch_id,cum_solving_time_us
 
 ### Next
 Milestone 4c: candidate/outcome CSV loggers (feature extraction begins)
+
+## 2026-09-21 — Milestone 4c: Candidate + Outcome Loggers
+
+Two CSV logs now produced by QSYM:
+- candidates.csv     -- every branch decision (with is_interesting flag)
+- solver_timing.csv  -- every Z3 solve (result + elapsed_us)
+
+Join verified: 3 interesting candidates = 3 solver invocations.
+Both logs use stable branch_id format (build_id:0xoffset).
+
+Known issue: candidate logged AFTER solve (order will be fixed in 4d).
+
+Evidence: baseline/qsym/milestone_04c_candidate_logging/
