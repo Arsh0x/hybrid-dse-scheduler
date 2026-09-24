@@ -131,3 +131,30 @@ Both logs use stable branch_id format (build_id:0xoffset).
 Known issue: candidate logged AFTER solve (order will be fixed in 4d).
 
 Evidence: baseline/qsym/milestone_04c_candidate_logging/
+
+## 2026-09-24 — Milestone 4d: Measurement Audit + Pre-Solve Features
+
+### Achievements
+- Fixed log ordering: candidate timestamp now captured BEFORE solving
+- Added constraint_count feature (solver_.assertions().size())
+- Verified on z3_target: is_interesting=1 rows have constraint_count=1
+
+### New CSV schema (candidates.csv)
+schema_version,candidate_id,timestamp_us,branch_id,is_interesting,taken,constraint_count
+
+### Sample verified pattern
+v1,1,...,0x7dd,1,1,1   <- interesting, constraint_count=1
+v1,1,...,0x7dd,0,1,0   <- rejected, constraint_count=0
+
+### Reproducibility
+Added /workspace/setup_qsym.sh -- one-command restore + rebuild after
+container restart. Points at /workspace/solver.cpp.4d snapshot.
+
+### Evidence
+- baseline/qsym/milestone_04d_features/
+- baseline/qsym/setup_qsym.sh
+- baseline/qsym/solver.cpp.latest
+
+### Next
+Milestone 4e: Phase 1 checkpoint -- formal verification of complete
+measurement pipeline
