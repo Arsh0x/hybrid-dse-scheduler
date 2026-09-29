@@ -158,3 +158,34 @@ container restart. Points at /workspace/solver.cpp.4d snapshot.
 ### Next
 Milestone 4e: Phase 1 checkpoint -- formal verification of complete
 measurement pipeline
+
+## 2026-09-29 — Milestone 5a: Phase 2a Spike (AUROC Validation)
+
+### Goal
+Test whether pre-solve binary features predict DSE utility.
+
+### Result: GO
+- Random-split AUROC: 0.863 (both features)
+- path_length alone: 0.867
+- symbolized_bytes alone: 0.838
+- Random baseline: 0.528
+
+### Data (zlib minigzip -d, 3 min)
+- 344 candidates (83 interesting, 261 rejected)
+- 345 solver invocations (256 SAT, 89 UNSAT)
+
+### Class separation
+| Feature | Interesting | Rejected | Ratio |
+| path_length | 13.14 | 5.97 | 2.20x |
+| symbolized_bytes | 2.29 | 1.32 | 1.73x |
+
+### Issues Found
+- constraint_count is leaky (read after addConstraint, always 0 for rejected)
+- Single target only
+- Small test set
+
+### Decision
+GO to Phase 2b. Paper's thesis is empirically grounded.
+
+### Evidence
+- baseline/qsym/milestone_5a_spike/
