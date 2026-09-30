@@ -189,3 +189,30 @@ GO to Phase 2b. Paper's thesis is empirically grounded.
 
 ### Evidence
 - baseline/qsym/milestone_5a_spike/
+
+## 2026-09-30 — Milestones 5b + 5c: Leakage Fix + Cross-Program Validation
+
+### 5b: Fixed constraint_count leakage
+- Moved read of solver_.assertions().size() to BEFORE addConstraint
+- Discovered deeper issue: constraint accumulation only happens after
+  interesting branches, so constraint_count>0 still perfectly encodes
+  the label (AUROC 1.000 cross-program). Not usable as a feature.
+- Documented as QSYM structural artifact.
+
+### 5c: Cross-program generalization
+- Added libpng 1.6.43 as second target with custom stdin fuzz driver
+- Data: zlib 351 candidates, libpng 640 candidates
+- Result:
+  - path_length: AUROC 0.892 (zlib->libpng), 0.899 (libpng->zlib)
+  - symbolized_bytes: AUROC 0.632, direction reverses
+  - constraint_count: AUROC 1.000 (artifact)
+
+### Key Finding
+Only path_length generalizes bidirectionally. Need 2+ more generalizing
+features to defend the paper's ML story.
+
+### Next
+Milestone 5d: implement history and optimization-shaped features, retest.
+
+### Evidence
+- baseline/qsym/milestone_5c_cross_program/

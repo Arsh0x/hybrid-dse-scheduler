@@ -4,7 +4,7 @@
 
 set -e
 
-PATCHED_SRC="/workspace/solver.cpp.4d"
+PATCHED_SRC="/workspace/solver.cpp.5b"
 SOLVER_PATH="/workdir/qsym/qsym/pintool/solver.cpp"
 BUILD_DIR="/workdir/qsym/qsym/pintool"
 INSTALLED_SO="/usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so"
