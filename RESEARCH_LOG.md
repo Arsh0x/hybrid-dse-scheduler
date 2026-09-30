@@ -216,3 +216,34 @@ Milestone 5d: implement history and optimization-shaped features, retest.
 
 ### Evidence
 - baseline/qsym/milestone_5c_cross_program/
+
+## 2026-10-01 — Milestone 5e2: rtn_cmov + QSYM Stability
+
+### Engineering
+- Fixed PIN crash: RTN_InsHead now called at instrumentation time
+  (RTN_AddInstrumentFunction callback), not runtime
+- Fixed QSYM Python race condition (afl.py get_score OSError)
+- Added QSYM restart wrapper as fallback (documented as corrupting regime)
+
+### Result
+rtn_cmov FAILS cross-program generalization (AUROC 0.381/0.409).
+Adding it to baseline slightly hurts (0.909→0.910, 0.941→0.936).
+
+This is the THIRD optimization-shaped feature to fail:
+- rtn_offset: 0.52/0.47
+- rtn_size: 0.45/0.41
+- rtn_cmov: 0.38/0.41
+
+### Positive Result Retained
+Baseline (path_length + branch_hit_count) achieves AUROC 0.909/0.941.
+
+### Paper Decision
+Thesis must pivot: "Which pre-solve features generalize?" is a strong
+empirical study. Original "optimization-aware features improve
+scheduling" claim is falsified at binary-only cross-program level.
+
+### Next
+Phase A: write PAPER_SCOPE.md and lock the empirical study design.
+
+### Evidence
+- baseline/qsym/milestone_5e2_rtn_cmov/

@@ -25,6 +25,13 @@ make 2>&1 | tail -3
 echo "[3/3] Installing to Python package path..."
 cp "$BUILD_DIR/obj-intel64/libqsym.so" "$INSTALLED_SO"
 
+echo "Restoring patched afl.py..."
+if [ -f "/workspace/milestone_5e2_rtn_cmov/afl.py.patched" ]; then
+  cp /workspace/milestone_5e2_rtn_cmov/afl.py.patched \
+     /usr/local/lib/python2.7/dist-packages/qsym/afl.py
+  echo "  OK: afl.py race fix restored"
+fi
+
 echo ""
 echo "Verify:"
 strings "$INSTALLED_SO" | grep -c "candidate_id" && echo "  OK: candidate_id present" || echo "  WARN: candidate_id missing"
