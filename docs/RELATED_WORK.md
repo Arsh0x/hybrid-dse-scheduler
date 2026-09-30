@@ -80,3 +80,92 @@ No paper in this list combines:
 5. Continuous per-branch budget allocation under ROI
 
 OptSE gets closest on (4) but not (1)(2)(3). MEUZZ gets closest on (2) but not (1)(3)(4). Zhang et al. 2024 gets closest on (3) but not (1)(2)(4).
+
+
+## Critical Near-Neighbors (Explicit Differentiation Required)
+
+These papers are the ones reviewers will use to challenge our novelty. Each requires
+explicit differentiation in the paper's introduction and related work sections.
+
+### MEUZZ (Chen et al., RAID 2020) — Closest Work
+**What they did:** ML-based seed scheduling for hybrid fuzzing. Uses lightweight
+static and dynamic features. Reports transferable models across programs (68%
+cross-program campaigns) and 27.1% coverage gain over QSYM.
+
+**What we add:** MEUZZ frames its contribution as adaptive scheduling with
+reusable models. It does not provide a feature-family taxonomy, does not isolate
+which feature classes transfer, and does not test compiler/optimization robustness.
+Our paper asks a different question: which feature families are safe to transfer,
+and which are not.
+
+**Reviewer will ask:** "How is this different from MEUZZ?"
+**Answer:** MEUZZ shows a model transfers. We show which features transfer and why.
+
+---
+
+### SyML (Ruaro et al., RAID 2021) — Transfer to Unseen Binaries
+**What they did:** Guiding symbolic execution toward vulnerable states through
+pattern learning. Claims transfer to unseen binaries via features such as memory
+accesses, register behavior, function complexity, and system calls.
+
+**What we add:** SyML does not isolate which feature classes fail under compilation
+variation. Our cross-compiler and cross-optimization analysis answers that question
+directly.
+
+**Reviewer will ask:** "SyML already transfers to unseen binaries — what's new?"
+**Answer:** SyML transfers a single model. We characterize which feature families
+survive transfer and which don't, with compiler and optimization splits.
+
+---
+
+### FeatMaker (Yoon & Cha, FSE 2024) — Automated Feature Engineering
+**What they did:** Automates feature engineering for symbolic execution search
+strategies. Generates state features automatically to improve search.
+
+**What we add:** FeatMaker's goal is generating better features. Our goal is
+characterizing which existing interpretable feature families transfer. Different
+question, different contribution.
+
+**Reviewer will ask:** "Why not use FeatMaker's automated features?"
+**Answer:** Interpretable feature families are what practitioners actually use in
+production hybrid fuzzers. Understanding which families are safe is a prerequisite
+to deploying any of them.
+
+---
+
+### Cha et al. (IEEE TSE 2019) — Per-Program Learned Heuristics
+**What they did:** Automatically learns search heuristics for dynamic symbolic
+execution. Learns per-subject-program heuristics.
+
+**What we add:** Cha et al.'s per-program learning cuts against the idea that one
+cross-program feature set transfers a priori. Our finding — that some families
+DO transfer cross-program — contrasts with the assumption behind per-program
+learning.
+
+**Reviewer will ask:** "Isn't per-program learning better than cross-program?"
+**Answer:** Per-program learning costs training time per target. If certain feature
+families transfer, practitioners can skip the per-target training step. Our result
+establishes which families make that shortcut safe.
+
+---
+
+## Novelty Statement (Defensible in One Paragraph)
+
+Prior work establishes ML-guided scheduling (MEUZZ), transferable learned models
+(SyML), and feature engineering for DSE (FeatMaker). What none of them do is
+systematically separate feature families by cross-program, cross-compiler, and
+cross-optimization robustness. Our contribution is the first such study in binary
+hybrid fuzzing. We show that structural (path_length) and history (branch_hit_count)
+features transfer bidirectionally (AUROC 0.909/0.941) while symbolic, optimization-
+geometry, and optimization-instruction-mix features do not (AUROC below 0.50 in
+some directions). We provide a reusable evaluation methodology and an evidence-
+backed interpretation of why certain families fail.
+
+## Risks to Novelty
+
+1. "Apparent novelty" — very recent niche papers outside our search corpus could
+   overlap. Mitigate with a fresh literature review at submission time.
+2. Trend risk — reviewers may see this as trend-following (adaptive orchestration
+   is a hot topic). Mitigate by emphasizing the methodology contribution.
+3. Scope risk — reviewers may want even more targets. Mitigate with our planned
+   62-program suite.
