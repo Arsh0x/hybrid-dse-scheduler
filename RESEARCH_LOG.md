@@ -314,3 +314,28 @@ for the paper's final numbers with 10-min runs + bootstrap CIs.
 - benchmarks/zlib/metadata.yaml
 - benchmarks/libpng/metadata.yaml
 - benchmarks/libpng/fuzz_stdin.c
+
+## 2026-10-03 — Milestone 6b: Run Automation Pipeline
+
+### Achievement
+`run_experiment.py` runs a complete hybrid fuzzing experiment with one command:
+- Starts AFL master + slave
+- Starts QSYM attached to slave
+- Runs for configurable minutes
+- Stops cleanly
+- Copies logs to run directory
+- Writes metadata.json
+
+### Validated
+`python3 run_experiment.py zlib gcc O2 1 --minutes 2`
+→ 137 candidates in 2 minutes
+→ Complete run dir at /workspace/runs/zlib/gcc-O2/rep-1/
+
+### Fixes Applied
+- Added `--` separator to AFL commands (required by QSYM's fuzzer_stats parser)
+- Added `--` separator to QSYM command (separates QSYM args from target args)
+- Added pyyaml install to setup_qsym.sh
+
+### Next
+Milestone 6c: extract_dataset.py + analyze.py
+
