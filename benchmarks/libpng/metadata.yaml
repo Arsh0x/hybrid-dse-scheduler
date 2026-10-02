@@ -1,0 +1,55 @@
+name: libpng
+domain: image
+version: "1.6.43"
+url: "https://download.sourceforge.net/libpng/libpng-1.6.43.tar.gz"
+
+dependencies:
+  - zlib
+
+build:
+  configure: |
+    CC=afl-gcc \
+    CPPFLAGS="-DPNG_ZLIB_VERNUM=0x1310 -I<ZDIR>" \
+    LDFLAGS="-L<ZDIR>" \
+    ./configure --disable-shared --enable-static
+  make: "make -j$(nproc)"
+  custom_build: |
+    # After libpng builds, compile the stdin fuzz driver:
+    afl-gcc -I. -I<ZDIR> -o fuzz_stdin fuzz_stdin.c .libs/libpng16.a -L<ZDIR> -lz -lm
+  products:
+    - libpng16.a
+    - fuzz_stdin      # custom driver
+
+target:
+  binary: fuzz_stdin
+  args: []
+  stdin_mode: true
+  file_mode: false
+
+seeds:
+  dir: seeds/
+  source: mixed        # shipped tests + generated
+  count: 5
+  files:
+    - s1.png   # pngtest.png
+    - s2.png   # pngbar.png
+    - s3.png   # pngnow.png
+    - s4.png   # truncated pngtest
+    - s5.png   # PNG signature only
+
+issues:
+  - type: version_check
+    description: "libpng 1.6.43 checks ZLIB_VERNUM; needs CPPFLAGS override"
+    fix: "-DPNG_ZLIB_VERNUM=0x1310"
+  - type: custom_driver
+    description: "libpng test programs don't read from stdin"
+    fix: "fuzz_stdin.c reads all input, decodes as PNG"
+
+notes: |
+  Depends on our instrumented zlib build.
+  Custom driver caps dimensions to prevent OOM.
+
+expected:
+  build_time_sec: 120
+  afl_exec_per_sec: ~500
+  typical_candidates_per_3min: 600

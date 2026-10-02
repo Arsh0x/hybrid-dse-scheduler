@@ -282,3 +282,35 @@ for the paper's final numbers with 10-min runs + bootstrap CIs.
 ### Evidence
 - baseline/qsym/milestone_5f_cfg_features/
 - baseline/qsym/milestone_5g_instruction_mix/
+
+## 2026-10-03 — Milestone 6a: Build Automation Pipeline
+
+### Achievement
+`build_program.py` builds zlib and libpng end-to-end with one command:
+- Downloads and extracts source tarballs
+- Handles dependencies (zlib for libpng)
+- Applies version overrides (PNG_ZLIB_VERNUM)
+- Copies custom driver files from metadata dir
+- Runs custom build steps
+- Manages seeds (once populated)
+
+### Validated Builds
+- `python3 /workspace/scripts/build_program.py zlib gcc O2` → binary + seeds
+- `python3 /workspace/scripts/build_program.py libpng gcc O2` → binary + seeds
+
+### Python 3.5 Compatibility Fixes
+- open(str(path)) for Path objects
+- universal_newlines=True instead of text=True
+- stdout=PIPE, stderr=PIPE instead of capture_output=True
+
+### Next
+- Regenerate seed corpora for zlib and libpng
+- Write run_experiment.py (config-driven AFL+QSYM runs)
+- Write extract_dataset.py (raw logs to Parquet)
+- Write analyze.py (cross-program AUROC with bootstrap CIs)
+
+### Evidence
+- scripts/build_program.py (243 lines, working)
+- benchmarks/zlib/metadata.yaml
+- benchmarks/libpng/metadata.yaml
+- benchmarks/libpng/fuzz_stdin.c
