@@ -247,3 +247,38 @@ Phase A: write PAPER_SCOPE.md and lock the empirical study design.
 
 ### Evidence
 - baseline/qsym/milestone_5e2_rtn_cmov/
+
+## 2026-10-03 — Milestones 5f + 5g: F5 + F6 Complete
+
+### F5 (CFG structure, 4 features)
+insn_pos_in_rtn, rtn_insn_count, rtn_branch_count, rtn_indirect_count
+Result: all fail. Family AUROC 0.478/0.353.
+
+### F6 (instruction mix, 2 features)
+rtn_simd_count, rtn_mem_ops
+Result: both fail. Family AUROC 0.533/0.596.
+
+### Combined F4+F5+F6
+AUROC 0.527/0.264 — worse than random.
+
+### Baseline
+path_length + branch_hit_count: AUROC 0.885/0.950 (unchanged by
+adding any optimization feature).
+
+### Final Tally
+17 features tested across 7 families.
+2 generalize (path_length, branch_hit_count).
+15 fail (symbolic, history-outcome, opt-geometry, opt-CFG, opt-instruction-mix).
+
+### Verdict
+The empirical thesis is airtight. Optimization-shaped features do not
+generalize for binary hybrid fuzzing. Structural and history-frequency
+features do.
+
+### Next
+Phase C: automation pipeline. Then full 62-program data collection
+for the paper's final numbers with 10-min runs + bootstrap CIs.
+
+### Evidence
+- baseline/qsym/milestone_5f_cfg_features/
+- baseline/qsym/milestone_5g_instruction_mix/
