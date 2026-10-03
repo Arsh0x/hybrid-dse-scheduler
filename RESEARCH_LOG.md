@@ -339,3 +339,35 @@ for the paper's final numbers with 10-min runs + bootstrap CIs.
 ### Next
 Milestone 6c: extract_dataset.py + analyze.py
 
+
+## 2026-10-03 — Milestone 6c: Full Pipeline + First Cross-Program CIs
+
+### Pipeline Complete
+- build_program.py (build any target)
+- run_experiment.py (run AFL+QSYM, capture logs)
+- extract_dataset.py (join candidates + solver timing)
+- analyze.py (cross-program AUROC + bootstrap CIs)
+
+### First Cross-Program Results (2-min runs)
+- libpng (1491 rows) → zlib (137 rows): baseline 0.931 [0.879, 0.975]
+- zlib (137 rows) → libpng (1491 rows): baseline 0.636 [0.608, 0.667]
+
+### Key Findings
+1. branch_hit_count alone beats baseline in one direction (0.834 vs 0.636)
+   Adding path_length to it HURTS (0.834 -> 0.636).
+2. path_length is scale-sensitive: libpng range 1-126, zlib range 1-24.
+   Trained on libpng, tested on zlib gives AUROC 0.185 (below random).
+3. All optimization families near random with 95% CIs.
+
+### Caveat
+Training set asymmetry (libpng 1491 vs zlib 137 rows) may explain the
+weak reverse direction. Need 10-min runs to equalize.
+
+### Next
+Run 10-minute experiments on both programs for a fair comparison.
+Then commit final Phase C milestone.
+
+### Evidence
+- scripts/analyze.py
+- scripts/extract_dataset.py
+- /workspace/dataset/analysis.csv
