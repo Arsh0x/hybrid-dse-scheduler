@@ -371,3 +371,65 @@ Then commit final Phase C milestone.
 - scripts/analyze.py
 - scripts/extract_dataset.py
 - /workspace/dataset/analysis.csv
+
+## 2026-10-06 — Milestone 6c: 10-Minute Balanced Cross-Program Run
+
+### Setup
+- zlib: 1875 candidates in 10 minutes
+- libpng: 9996 candidates in 10 minutes
+- Total: 11871 rows
+- Bootstrap CIs on all AUROCs (500 resamples)
+
+### Results (95% CI in brackets)
+
+libpng (9996) -> zlib (1875):
+  baseline      0.885 [0.867, 0.901]
+  history_freq  0.882 [0.864, 0.898]
+  structural    0.834 [0.815, 0.852]
+  symbolic      0.774 [0.752, 0.796]
+  opt_insn_mix  0.435 [0.412, 0.459]
+  history_outcome 0.421 [0.391, 0.455]
+  opt_cfg       0.413 [0.387, 0.441]
+  opt_geometry  0.402 [0.376, 0.428]
+
+zlib (1875) -> libpng (9996):
+  history_freq  0.736 [0.726, 0.748]
+  structural    0.734 [0.725, 0.745]
+  symbolic      0.714 [0.703, 0.725]
+  baseline      0.698 [0.688, 0.710]
+  opt_insn_mix  0.518 [0.504, 0.533]
+  opt_cfg       0.512 [0.498, 0.525]
+  history_outcome 0.441 [0.430, 0.452]
+  opt_geometry  0.439 [0.424, 0.452]
+
+### Key Findings (revised paper story)
+
+1. Symbolic features DO generalize (0.774 / 0.714), contradicting
+   earlier 2-min results. The pre-solve constraint_count fix in
+   milestone 5b made this visible.
+
+2. Baseline (path+hit) is WORSE than individual features in the
+   reverse direction (0.698 vs 0.736 history_freq alone). Combining
+   good features can HURT.
+
+3. Direction asymmetry is real, not undertraining: even with 1875
+   training rows from zlib, the reverse direction stays weak
+   (0.698 vs 0.885). Larger/more diverse training sets transfer
+   better.
+
+4. History-outcome and all optimization families remain near/below
+   random, now with statistical rigor.
+
+### Paper scope revision needed
+Old: "structural + history generalize; symbolic + opt fail"
+New: "structural + history + symbolic generalize; history-outcome
+      and opt fail; directionality matters; combinations can hurt"
+
+### Next
+- Run 3+ repetitions of each (program, config) for variance
+- Add 2 more programs (libjpeg-turbo, libxml2) to test finding #3
+
+### Evidence
+- data/milestone_6c/processed.csv
+- data/milestone_6c/analysis.csv
+- baseline/runs/6c-10min/

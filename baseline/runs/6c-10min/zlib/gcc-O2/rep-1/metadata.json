@@ -1,0 +1,12 @@
+{
+  "program": "zlib",
+  "compiler": "gcc",
+  "minutes": 10,
+  "target_cmd": [
+    "/workspace/builds/zlib/gcc-O2/src/minigzip",
+    "-d"
+  ],
+  "opt": "O2",
+  "finished_at": "2026-10-05T20:05:05.029854Z",
+  "repetition": 1
+}

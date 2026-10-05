@@ -1,0 +1,11 @@
+{
+  "repetition": 1,
+  "minutes": 10,
+  "program": "libpng",
+  "target_cmd": [
+    "/workspace/builds/libpng/gcc-O2/src/fuzz_stdin"
+  ],
+  "compiler": "gcc",
+  "finished_at": "2026-10-05T20:15:24.231675Z",
+  "opt": "O2"
+}

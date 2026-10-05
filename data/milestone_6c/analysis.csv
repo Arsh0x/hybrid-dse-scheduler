@@ -1,0 +1,17 @@
+family,auroc,train_program,ci_lo,test_program,features,ci_hi
+opt_cfg,0.4132,libpng,0.3871,zlib,insn_pos_in_rtn+rtn_insn_count+rtn_branch_count+rtn_indirect_count,0.4406
+history_outcome,0.4213,libpng,0.3913,zlib,prev_sat+prev_unsat+prev_timeout,0.4546
+symbolic,0.7738,libpng,0.7522,zlib,constraint_count+symbolized_bytes,0.7964
+history_freq,0.8819,libpng,0.8636,zlib,branch_hit_count,0.8980
+structural,0.8338,libpng,0.8150,zlib,path_length,0.8521
+opt_insn_mix,0.4348,libpng,0.4116,zlib,rtn_simd_count+rtn_mem_ops,0.4587
+opt_geometry,0.4019,libpng,0.3759,zlib,rtn_offset+rtn_size+rtn_cmov,0.4281
+baseline,0.8850,libpng,0.8667,zlib,path_length+branch_hit_count,0.9011
+opt_cfg,0.5116,zlib,0.4977,libpng,insn_pos_in_rtn+rtn_insn_count+rtn_branch_count+rtn_indirect_count,0.5251
+history_outcome,0.4414,zlib,0.4295,libpng,prev_sat+prev_unsat+prev_timeout,0.4525
+symbolic,0.7140,zlib,0.7027,libpng,constraint_count+symbolized_bytes,0.7253
+history_freq,0.7364,zlib,0.7256,libpng,branch_hit_count,0.7481
+structural,0.7345,zlib,0.7248,libpng,path_length,0.7447
+opt_insn_mix,0.5181,zlib,0.5042,libpng,rtn_simd_count+rtn_mem_ops,0.5325
+opt_geometry,0.4386,zlib,0.4240,libpng,rtn_offset+rtn_size+rtn_cmov,0.4520
+baseline,0.6981,zlib,0.6879,libpng,path_length+branch_hit_count,0.7100
