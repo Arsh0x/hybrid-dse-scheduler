@@ -91,10 +91,9 @@ shift, taint-domain mismatch)?
 
 ### F3. Symbolic
 - symbolized_bytes (taint slice width)
-- ast_node_count (constraint formula size)
-- constraint_count (accumulated solver assertions)
-- **status:** all fail cross-program. constraint_count also has a
-  hidden label-encoding artifact (AUROC 1.000 by accident).
+- constraint_count (accumulated solver assertions, pre-solve)
+- **status:** GENERALIZES (0.774 / 0.714) after milestone 5b pre-solve fix.
+  Earlier "fails" verdict was based on contaminated data.
 
 ### F4. Optimization — Function Geometry
 - rtn_offset (offset from function start)
