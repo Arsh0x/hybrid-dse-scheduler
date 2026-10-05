@@ -1,0 +1,899 @@
+DEBUG:qsym.afl:Temp directory=/tmp/tmp2Wh30s
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000390,src:000001,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-0/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-0 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000000,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000001,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000002,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000003,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000004,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000005,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000006,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000007,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000008,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000009,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000010,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000011,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000012,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000013,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000014,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000015,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000016,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000017,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000018,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000019,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000020,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000021,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000022,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000023,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000024,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000025,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000026,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000027,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000028,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000029,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000030,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000031,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000032,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000033,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000034,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000035,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000036,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000037,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000038,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000039,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000040,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000041,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000042,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000043,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000044,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000045,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000046,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000047,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000048,src:id:000390
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000049,src:id:000390
+DEBUG:qsym.afl:Generate 141 testcases
+DEBUG:qsym.afl:50 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000452,src:000003,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-1/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-1 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=3 s, Emulation=3 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000046,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-2/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-2 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=5 s, Emulation=5 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000050,src:id:000046
+DEBUG:qsym.afl:Generate 3 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000014,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-3/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-3 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000051,src:id:000014
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000052,src:id:000014
+DEBUG:qsym.afl:Generate 22 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000038,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-4/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-4 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000053,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000054,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000055,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000056,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000057,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000058,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000059,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000060,src:id:000038
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000061,src:id:000038
+DEBUG:qsym.afl:Generate 48 testcases
+DEBUG:qsym.afl:9 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000011,src:000000,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-5/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-5 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000556,sync:qsym,src:000061,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-6/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-6 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 12 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000555,sync:qsym,src:000058,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-7/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-7 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 14 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000554,sync:qsym,src:000057,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-8/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-8 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000553,sync:qsym,src:000056,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-9/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-9 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000552,sync:qsym,src:000055,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-10/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-10 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=5 s, Emulation=5 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000551,sync:qsym,src:000054,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-11/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-11 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000550,sync:qsym,src:000053,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-12/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-12 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 1 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000273,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-13/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-13 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000062,src:id:000273
+DEBUG:qsym.afl:Generate 19 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000482,sync:qsym,src:000011,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-14/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-14 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000485,sync:qsym,src:000022,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-15/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-15 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 10 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000484,sync:qsym,src:000021,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-16/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-16 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000483,sync:qsym,src:000019,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-17/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-17 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=8 s, Solver=2 s, Return=1
+DEBUG:qsym.afl:Generate 15 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000487,sync:qsym,src:000032,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-18/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-18 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=8 s, Solver=2 s, Return=1
+DEBUG:qsym.afl:Generate 8 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000622,src:000450,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-19/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-19 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000649,src:000550+000487,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-20/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-20 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000063,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000064,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000065,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000066,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000067,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000068,src:id:000649
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000069,src:id:000649
+DEBUG:qsym.afl:Generate 63 testcases
+DEBUG:qsym.afl:7 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000626,src:000486,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-21/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-21 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000070,src:id:000626
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000071,src:id:000626
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000072,src:id:000626
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000073,src:id:000626
+DEBUG:qsym.afl:Generate 30 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000699,sync:qsym,src:000068,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-22/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-22 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000705,sync:qsym,src:000072,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-23/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-23 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 15 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000704,sync:qsym,src:000071,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-24/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-24 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000074,src:id:000704
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000075,src:id:000704
+DEBUG:qsym.afl:Generate 34 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000698,sync:qsym,src:000066,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-25/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-25 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 12 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000712,sync:qsym,src:000075,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-26/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-26 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 6 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000028,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-27/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-27 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000697,sync:qsym,src:000064,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-28/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-28 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 4 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000651,src:000554+000492,op:splice,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-29/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-29 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000076,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000077,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000078,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000079,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000080,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000081,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000082,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000083,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000084,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000085,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000086,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000087,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000088,src:id:000651
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000089,src:id:000651
+DEBUG:qsym.afl:Generate 92 testcases
+DEBUG:qsym.afl:14 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000722,src:000721,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-30/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-30 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000728,sync:qsym,src:000081,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-31/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-31 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000727,sync:qsym,src:000080,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-32/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-32 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=6 s, Emulation=6 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000726,sync:qsym,src:000079,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-33/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-33 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000725,sync:qsym,src:000077,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-34/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-34 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000407,src:000001,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-35/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-35 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 11 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000080,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-36/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-36 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000090,src:id:000080
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000091,src:id:000080
+DEBUG:qsym.afl:Generate 36 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000030,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-37/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-37 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 7 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000617,src:000407+000325,op:splice,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-38/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-38 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000092,src:id:000617
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000093,src:id:000617
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000094,src:id:000617
+DEBUG:qsym.afl:Generate 29 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000492,sync:qsym,src:000049,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-39/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-39 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 8 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000491,sync:qsym,src:000045,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-40/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-40 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000095,src:id:000491
+DEBUG:qsym.afl:Generate 36 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000490,sync:qsym,src:000038,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-41/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-41 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 21 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000488,sync:qsym,src:000036,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-42/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-42 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 34 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000486,sync:qsym,src:000026,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-43/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-43 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000096,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000097,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000098,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000099,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000100,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000101,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000102,src:id:000486
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000103,src:id:000486
+DEBUG:qsym.afl:Generate 100 testcases
+DEBUG:qsym.afl:8 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000125,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-44/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-44 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000104,src:id:000125
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000105,src:id:000125
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000106,src:id:000125
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000107,src:id:000125
+DEBUG:qsym.afl:Generate 15 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000040,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-45/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-45 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 12 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000031,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-46/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-46 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000050,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-47/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-47 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000108,src:id:000050
+DEBUG:qsym.afl:Generate 100 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000048,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-48/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-48 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000759,src:000752+000660,op:splice,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-49/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-49 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000109,src:id:000759
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000110,src:id:000759
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000111,src:id:000759
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000112,src:id:000759
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000113,src:id:000759
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000114,src:id:000759
+DEBUG:qsym.afl:Generate 21 testcases
+DEBUG:qsym.afl:6 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000773,src:000075+000314,op:splice,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-50/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-50 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000115,src:id:000773
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000116,src:id:000773
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000117,src:id:000773
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000118,src:id:000773
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000119,src:id:000773
+DEBUG:qsym.afl:Generate 24 testcases
+DEBUG:qsym.afl:5 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000752,src:000742,op:havoc,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-51/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-51 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000120,src:id:000752
+DEBUG:qsym.afl:Generate 5 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000794,sync:qsym,src:000119,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-52/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-52 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000793,sync:qsym,src:000118,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-53/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-53 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 24 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000701,src:000700+000330,op:splice,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-54/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-54 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000121,src:id:000701
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000122,src:id:000701
+DEBUG:qsym.afl:Generate 55 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000619,src:000430,op:havoc,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-55/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-55 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=12 s, Emulation=12 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000123,src:id:000619
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000124,src:id:000619
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000125,src:id:000619
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000126,src:id:000619
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000127,src:id:000619
+DEBUG:qsym.afl:Generate 116 testcases
+DEBUG:qsym.afl:5 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000582,src:000319+000348,op:splice,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-56/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-56 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000128,src:id:000582
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000129,src:id:000582
+DEBUG:qsym.afl:Generate 148 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000801,sync:qsym,src:000127,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-57/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-57 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 6 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000022,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-58/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-58 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000130,src:id:000022
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000131,src:id:000022
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000132,src:id:000022
+DEBUG:qsym.afl:Generate 30 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000782,src:000779+000083,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-59/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-59 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000133,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000134,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000135,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000136,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000137,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000138,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000139,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000140,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000141,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000142,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000143,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000144,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000145,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000146,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000147,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000148,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000149,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000150,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000151,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000152,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000153,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000154,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000155,src:id:000782
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000156,src:id:000782
+DEBUG:qsym.afl:Generate 203 testcases
+DEBUG:qsym.afl:24 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000805,sync:qsym,src:000132,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-60/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-60 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 60 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000670,src:000636,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-61/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-61 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=14 s, Emulation=11 s, Solver=3 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000157,src:id:000670
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000158,src:id:000670
+DEBUG:qsym.afl:Generate 304 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000190,src:000000,op:havoc,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-62/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-62 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000334,src:000000+000295,op:splice,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-63/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-63 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=13 s, Emulation=12 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 94 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000183,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-64/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-64 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 17 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000792,src:000787+000162,op:splice,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-65/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-65 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 17 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000760,src:000752+000089,op:splice,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-66/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-66 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000159,src:id:000760
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000160,src:id:000760
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000161,src:id:000760
+DEBUG:qsym.afl:Generate 45 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000044,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-67/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-67 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 82 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000292,src:000000,op:havoc,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-68/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-68 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=12 s, Emulation=12 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000162,src:id:000292
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000163,src:id:000292
+DEBUG:qsym.afl:Generate 22 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000083,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-69/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-69 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000164,src:id:000083
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000165,src:id:000083
+DEBUG:qsym.afl:Generate 19 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000053,src:000000,op:havoc,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-70/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-70 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000751,src:000742,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-71/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-71 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000166,src:id:000751
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000167,src:id:000751
+DEBUG:qsym.afl:Generate 20 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000212,src:000000,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-72/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-72 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=12 s, Emulation=12 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000168,src:id:000212
+DEBUG:qsym.afl:Generate 18 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000814,src:000417+000743,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-73/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-73 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000169,src:id:000814
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000170,src:id:000814
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000171,src:id:000814
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000172,src:id:000814
+DEBUG:qsym.afl:Generate 83 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000750,src:000742,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-74/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-74 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000173,src:id:000750
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000174,src:id:000750
+DEBUG:qsym.afl:Generate 23 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000742,src:000735,op:havoc,rep:4,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-75/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-75 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 0 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000884,src:000883+000310,op:splice,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-76/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-76 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000175,src:id:000884
+DEBUG:qsym.afl:Generate 111 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000883,sync:qsym,src:000170,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-77/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-77 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000176,src:id:000883
+DEBUG:qsym.afl:Generate 53 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000142,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-78/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-78 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=17 s, Emulation=13 s, Solver=3 s, Return=1
+DEBUG:qsym.afl:Generate 388 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000107,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-79/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-79 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000177,src:id:000107
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000178,src:id:000107
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000179,src:id:000107
+DEBUG:qsym.afl:Generate 20 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000029,src:000000,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-80/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-80 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 5 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000141,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-81/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-81 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=12 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 42 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000739,src:000731,op:havoc,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-82/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-82 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000180,src:id:000739
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000181,src:id:000739
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000182,src:id:000739
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000183,src:id:000739
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000184,src:id:000739
+DEBUG:qsym.afl:Generate 87 testcases
+DEBUG:qsym.afl:5 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000875,src:000872,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-83/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-83 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=91 s, Emulation=41 s, Solver=50 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000185,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000186,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000187,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000188,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000189,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000190,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000191,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000192,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000193,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000194,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000195,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000196,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000197,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000198,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000199,src:id:000875
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000200,src:id:000875
+DEBUG:qsym.afl:Generate 254 testcases
+DEBUG:qsym.afl:16 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000908,sync:qsym,src:000184,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-84/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-84 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000201,src:id:000908
+DEBUG:qsym.afl:Generate 32 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000928,src:000926,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-85/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-85 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=92 s, Emulation=30 s, Solver=62 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000202,src:id:000928
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000203,src:id:000928
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000204,src:id:000928
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000205,src:id:000928
+DEBUG:qsym.afl:Generate 128 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000935,src:000931,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-86/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-86 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=13 s, Emulation=12 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 18 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000931,sync:qsym,src:000201,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-87/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-87 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 18 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000636,src:000491+000450,op:splice,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-88/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-88 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=33 s, Emulation=32 s, Solver=1 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000206,src:id:000636
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000207,src:id:000636
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000208,src:id:000636
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000209,src:id:000636
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000210,src:id:000636
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000211,src:id:000636
+DEBUG:qsym.afl:Generate 294 testcases
+DEBUG:qsym.afl:6 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001126,sync:qsym,src:000204,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-89/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-89 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=90 s, Emulation=20 s, Solver=70 s, Return=124
+DEBUG:qsym.afl:Generate 34 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000017,src:000000,op:havoc,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-90/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-90 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000212,src:id:000017
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000213,src:id:000017
+DEBUG:qsym.afl:Generate 53 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000846,src:000840+000839,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-91/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-91 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=10 s, Emulation=10 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000214,src:id:000846
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000215,src:id:000846
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000216,src:id:000846
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000217,src:id:000846
+DEBUG:qsym.afl:Generate 89 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000203,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-92/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-92 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=16 s, Emulation=16 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000218,src:id:000203
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000219,src:id:000203
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000220,src:id:000203
+DEBUG:qsym.afl:Generate 85 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000265,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-93/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-93 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=13 s, Emulation=13 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000221,src:id:000265
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000222,src:id:000265
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000223,src:id:000265
+DEBUG:qsym.afl:Generate 61 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000167,src:000000,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-94/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-94 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=24 s, Emulation=23 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000224,src:id:000167
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000225,src:id:000167
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000226,src:id:000167
+DEBUG:qsym.afl:Generate 90 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001122,src:001004+000884,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-95/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-95 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000227,src:id:001122
+DEBUG:qsym.afl:Generate 14 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001296,sync:qsym,src:000213,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-96/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-96 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=15 s, Emulation=15 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000228,src:id:001296
+DEBUG:qsym.afl:Generate 72 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001297,sync:qsym,src:000223,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-97/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-97 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=16 s, Emulation=16 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000229,src:id:001297
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000230,src:id:001297
+DEBUG:qsym.afl:Generate 72 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000714,src:000006+000685,op:splice,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-98/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-98 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=21 s, Emulation=21 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000231,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000232,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000233,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000234,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000235,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000236,src:id:000714
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000237,src:id:000714
+DEBUG:qsym.afl:Generate 141 testcases
+DEBUG:qsym.afl:7 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001325,sync:qsym,src:000228,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-99/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-99 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 1 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000866,src:000857+000250,op:splice,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-100/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-100 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=90 s, Emulation=20 s, Solver=69 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000238,src:id:000866
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000239,src:id:000866
+DEBUG:qsym.afl:Generate 66 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001332,sync:qsym,src:000233,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-101/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-101 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=16 s, Emulation=15 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 55 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001340,sync:qsym,src:000238,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-102/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-102 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=90 s, Emulation=24 s, Solver=66 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000240,src:id:001340
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000241,src:id:001340
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000242,src:id:001340
+DEBUG:qsym.afl:Generate 134 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000467,src:000025,op:havoc,rep:128,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-103/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-103 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=17 s, Emulation=17 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000243,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000244,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000245,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000246,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000247,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000248,src:id:000467
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000249,src:id:000467
+DEBUG:qsym.afl:Generate 47 testcases
+DEBUG:qsym.afl:7 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000049,src:000000,op:havoc,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-104/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-104 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=11 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 15 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000784,src:000782+000600,op:splice,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-105/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-105 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=22 s, Emulation=15 s, Solver=7 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000250,src:id:000784
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000251,src:id:000784
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000252,src:id:000784
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000253,src:id:000784
+DEBUG:qsym.afl:Generate 726 testcases
+DEBUG:qsym.afl:4 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001373,sync:qsym,src:000248,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-106/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-106 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=16 s, Emulation=16 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000254,src:id:001373
+DEBUG:qsym.afl:Generate 59 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001372,sync:qsym,src:000247,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-107/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-107 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=14 s, Emulation=14 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000255,src:id:001372
+DEBUG:qsym.afl:Generate 53 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001371,sync:qsym,src:000246,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-108/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-108 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=14 s, Emulation=14 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 92 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001401,sync:qsym,src:000255,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-109/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-109 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 12 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001400,sync:qsym,src:000254,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-110/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-110 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=25 s, Emulation=25 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000256,src:id:001400
+DEBUG:qsym.afl:Generate 78 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001370,sync:qsym,src:000244,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-111/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-111 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=13 s, Emulation=13 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000257,src:id:001370
+DEBUG:qsym.afl:Generate 34 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001429,sync:qsym,src:000256,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-112/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-112 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=9 s, Emulation=9 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 1 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001369,sync:qsym,src:000241,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-113/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-113 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=93 s, Emulation=32 s, Solver=60 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000258,src:id:001369
+DEBUG:qsym.afl:Generate 124 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000779,src:000777,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-114/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-114 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=92 s, Emulation=28 s, Solver=63 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000259,src:id:000779
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000260,src:id:000779
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000261,src:id:000779
+DEBUG:qsym.afl:Generate 634 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000777,src:000080+000701,op:splice,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-115/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-115 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=95 s, Emulation=39 s, Solver=55 s, Return=-9
+DEBUG:qsym.afl:Generate 431 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001524,src:001394+000936,op:splice,rep:8,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-116/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-116 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=12 s, Emulation=11 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000262,src:id:001524
+DEBUG:qsym.afl:Generate 17 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001526,src:001400,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-117/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-117 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=90 s, Emulation=90 s, Solver=0 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000263,src:id:001526
+DEBUG:qsym.afl:Generate 33 testcases
+DEBUG:qsym.afl:1 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000700,src:000693+000662,op:splice,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-118/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-118 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=13 s, Emulation=10 s, Solver=2 s, Return=1
+DEBUG:qsym.afl:Generate 495 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000693,src:000685,op:havoc,rep:16,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-119/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-119 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=7 s, Emulation=7 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 1 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000477,src:000037,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-120/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-120 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=91 s, Emulation=36 s, Solver=54 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000264,src:id:000477
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000265,src:id:000477
+DEBUG:qsym.afl:Generate 75 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001461,src:001332+000575,op:splice,rep:64,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-121/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-121 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=8 s, Emulation=8 s, Solver=0 s, Return=1
+DEBUG:qsym.afl:Generate 2 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:000272,src:000000,op:havoc,rep:32,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-122/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-122 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=90 s, Emulation=33 s, Solver=56 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000266,src:id:000272
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000267,src:id:000272
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000268,src:id:000272
+DEBUG:qsym.afl:Generate 74 testcases
+DEBUG:qsym.afl:3 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001580,sync:qsym,src:000264,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-123/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-123 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=92 s, Emulation=32 s, Solver=59 s, Return=124
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000269,src:id:001580
+DEBUG:qsym.afl:Creating: /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/queue/id:000270,src:id:001580
+DEBUG:qsym.afl:Generate 65 testcases
+DEBUG:qsym.afl:2 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001613,src:001612,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-124/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-124 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
+DEBUG:qsym.afl:Total=93 s, Emulation=92 s, Solver=0 s, Return=124
+DEBUG:qsym.afl:Generate 9 testcases
+DEBUG:qsym.afl:0 testcases are new
+DEBUG:qsym.afl:Run qsym: input=/workspace/runs/libpng/gcc-O2/rep-1/afl-out/afl-slave/queue/id:001612,src:001580,op:havoc,rep:2,+cov
+DEBUG:qsym.Executor:Executing timeout -k 5 90 /usr/local/lib/python2.7/dist-packages/qsym/../../../../third_party/pin-2.14-71313-gcc.4.4.7-linux/pin.sh -ifeellucky -t /usr/local/lib/python2.7/dist-packages/qsym/pintool/obj-intel64/libqsym.so -logfile /tmp/tmp2Wh30s/qsym-out-125/pin.log -i /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/.cur_input -s 1 -o /tmp/tmp2Wh30s/qsym-out-125 -l 1 -b /workspace/runs/libpng/gcc-O2/rep-1/afl-out/qsym/bitmap -- /workspace/builds/libpng/gcc-O2/src/fuzz_stdin
