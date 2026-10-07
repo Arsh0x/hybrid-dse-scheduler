@@ -433,3 +433,34 @@ New: "structural + history + symbolic generalize; history-outcome
 - data/milestone_6c/processed.csv
 - data/milestone_6c/analysis.csv
 - baseline/runs/6c-10min/
+
+## 2026-10-08 — QSYM Watchdog Implementation
+
+### Problem
+QSYM's PIN process can enter D-state (uninterruptible sleep) on hard seeds.
+`timeout -k 5 90` cannot kill D-state processes. QSYM silently stops
+producing candidates while consuming resources.
+
+### Fix
+Added QSYMWatchdog thread to run_experiment.py:
+- Monitors QSYM log mtime every 30s
+- If stale >N seconds (default 180), kills QSYM process group via killpg
+- Restarts QSYM attached to same AFL slave queue
+- Logs every restart to qsym_restarts.log
+- Records restart count in metadata.json
+
+Uses start_new_session=True on QSYM Popen so killpg reaches all descendants
+including the stuck PIN process.
+
+### Validation
+- 3-min normal run: 0 restarts (no false positives)
+- 5-min run with manual kill -9: 1 restart detected at 2:05 mark,
+  resumed producing candidates (408 total vs 335 baseline)
+
+### Impact
+- Enables reliable long-runs
+- Documents QSYM's hang behavior as reproducibility concern
+- Sets up safe cloud runs
+
+### Next
+Cloud migration with watchdog fix in place.

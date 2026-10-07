@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-run_experiment.py — Run a hybrid fuzzing experiment.
+run_experiment.py — Run a hybrid fuzzing experiment with QSYM watchdog.
 
 Usage:
-    run_experiment.py <program> <compiler> <opt> <repetition> [--minutes N] [--checkpoint-hours 1,6,12]
+    run_experiment.py <program> <compiler> <opt> <rep> [--minutes N]
+                       [--checkpoint-hours 1,6,12] [--watchdog-stale 180]
+                       [--no-watchdog]
 """
 
 import argparse
@@ -24,7 +26,8 @@ RUNS_DIR = WORKSPACE / "runs"
 
 
 def log(msg, level="INFO"):
-    print("[{}] {}".format(level, msg), flush=True)
+    ts = datetime.utcnow().strftime("%H:%M:%S")
+    print("[{}][{}] {}".format(ts, level, msg), flush=True)
 
 
 def die(msg):
@@ -39,7 +42,6 @@ def setup_environment(run_logs_dir):
     env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
     env["AFL_NO_AFFINITY"] = "1"
     env["AFL_PATH"] = "/afl"
-    # Per-run QSYM log paths (avoids collisions between parallel runs)
     env["QSYM_LOG_FILE"] = str(run_logs_dir / "solver_timing.csv")
     env["QSYM_CANDIDATE_LOG"] = str(run_logs_dir / "candidates.csv")
     env["QSYM_HISTORY_FILE"] = str(run_logs_dir / "branch_history.csv")
@@ -81,16 +83,19 @@ def prepare_run_dir(program, compiler, opt, rep):
     return run_dir, afl_out, logs_dir
 
 
-def checkpoint_worker(run_dir, logs_dir, total_minutes, checkpoint_hours):
-    """Background thread that snapshots logs at specified hour marks."""
+def checkpoint_worker(run_dir, logs_dir, total_minutes, checkpoint_hours, stop_flag):
     start = time.time()
     for hour in sorted(checkpoint_hours):
         target_sec = hour * 3600
         if target_sec > total_minutes * 60:
             continue
-        sleep_secs = target_sec - (time.time() - start)
-        if sleep_secs > 0:
-            time.sleep(sleep_secs)
+        while not stop_flag.is_set():
+            elapsed = time.time() - start
+            if elapsed >= target_sec:
+                break
+            time.sleep(min(30, target_sec - elapsed))
+        if stop_flag.is_set():
+            return
         cp_dir = run_dir / "checkpoints" / "{}h".format(hour)
         cp_dir.mkdir(parents=True, exist_ok=True)
         for f in ["candidates.csv", "solver_timing.csv", "branch_history.csv"]:
@@ -100,12 +105,111 @@ def checkpoint_worker(run_dir, logs_dir, total_minutes, checkpoint_hours):
                     shutil.copy(str(src), str(cp_dir / f))
                 except Exception as e:
                     log("checkpoint copy failed: {}".format(e), "WARN")
-        with open(str(cp_dir / "checkpoint.txt"), "w") as f:
-            f.write("hour={} wall_time={}\n".format(hour, time.time()))
-        log("checkpoint {}h saved to {}".format(hour, cp_dir))
+        log("checkpoint {}h saved".format(hour))
 
 
-def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
+class QSYMWatchdog(threading.Thread):
+    """
+    Watchdog that restarts QSYM if:
+      - its log file hasn't been modified for `stale_seconds`
+      - its process exits unexpectedly
+    Uses setsid to give QSYM its own process group so killpg works.
+    """
+
+    def __init__(self, run_dir, afl_out, target_cmd, env,
+                 stale_seconds=180, check_interval=30):
+        super().__init__()
+        self.daemon = True
+        self.run_dir = run_dir
+        self.afl_out = afl_out
+        self.target_cmd = target_cmd
+        self.env = env
+        self.stale_seconds = stale_seconds
+        self.check_interval = check_interval
+        self.stop_flag = threading.Event()
+        self.qsym_proc = None
+        self.restart_count = 0
+        self.log_fh = None
+        self.restart_log = run_dir / "qsym_restarts.log"
+
+    def _open_log(self):
+        qsym_log = self.run_dir / "qsym.log"
+        self.log_fh = open(str(qsym_log), "a")
+        self.log_fh.write("\n=== QSYM START #{} at {} ===\n".format(
+            self.restart_count, datetime.utcnow().isoformat()))
+        self.log_fh.flush()
+
+    def start_qsym(self):
+        self._open_log()
+        try:
+            self.qsym_proc = subprocess.Popen(
+                ["run_qsym_afl.py", "-a", "afl-slave",
+                 "-o", str(self.afl_out), "-n", "qsym", "--"] + self.target_cmd,
+                env=self.env,
+                stdout=self.log_fh,
+                stderr=subprocess.STDOUT,
+                start_new_session=True)
+        except Exception as e:
+            log("watchdog: failed to start QSYM: {}".format(e), "ERROR")
+            self.qsym_proc = None
+        return self.qsym_proc
+
+    def kill_qsym_tree(self):
+        if self.qsym_proc is None:
+            return
+        try:
+            pgid = os.getpgid(self.qsym_proc.pid)
+            os.killpg(pgid, signal.SIGKILL)
+            log("watchdog: sent SIGKILL to pgid {}".format(pgid), "WARN")
+        except Exception as e:
+            log("watchdog: killpg failed: {}".format(e), "WARN")
+        try:
+            self.qsym_proc.wait(timeout=5)
+        except Exception:
+            pass
+        self.qsym_proc = None
+
+    def _log_restart(self, reason):
+        with open(str(self.restart_log), "a") as f:
+            f.write("{}\trestart#\t{}\t{}\n".format(
+                datetime.utcnow().isoformat(), self.restart_count, reason))
+
+    def run(self):
+        time.sleep(5)
+        while not self.stop_flag.is_set():
+            self.stop_flag.wait(self.check_interval)
+            if self.stop_flag.is_set():
+                return
+            if self.qsym_proc is None:
+                continue
+            # Check process alive
+            ret = self.qsym_proc.poll()
+            if ret is not None:
+                log("watchdog: QSYM exited with code {}".format(ret), "WARN")
+                self.restart_count += 1
+                self._log_restart("exited_{}".format(ret))
+                self.start_qsym()
+                continue
+            # Check log staleness
+            qsym_log = self.run_dir / "qsym.log"
+            try:
+                age = time.time() - qsym_log.stat().st_mtime
+            except Exception:
+                age = 0
+            if age > self.stale_seconds:
+                log("watchdog: QSYM log stale {:.0f}s (threshold {}s) — restarting".format(
+                    age, self.stale_seconds), "WARN")
+                self.restart_count += 1
+                self._log_restart("stale_{}s".format(int(age)))
+                self.kill_qsym_tree()
+                self.start_qsym()
+
+    def stop(self):
+        self.stop_flag.set()
+
+
+def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours,
+                   watchdog_stale, use_watchdog):
     binary, args, uses_stdin = get_target_cmd(program, compiler, opt)
     if uses_stdin:
         target_cmd = [binary] + args
@@ -119,19 +223,21 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
     if not seeds_dir.exists() or not any(seeds_dir.iterdir()):
         die("no seeds at {}".format(seeds_dir))
 
-    # Write start_time.txt for later filtering
     start_sec = time.time()
     with open(str(run_dir / "start_time.txt"), "w") as f:
         f.write("{}\n".format(start_sec))
 
-    # Start checkpoint thread
+    stop_flag = threading.Event()
+
+    # Checkpoint thread
     if checkpoint_hours:
         t = threading.Thread(target=checkpoint_worker,
-                             args=(run_dir, logs_dir, minutes, checkpoint_hours))
+                             args=(run_dir, logs_dir, minutes, checkpoint_hours, stop_flag))
         t.daemon = True
         t.start()
         log("checkpoint hours: {}".format(sorted(checkpoint_hours)))
 
+    # Start AFL master
     master_log = run_dir / "afl_master.log"
     log("starting afl master...")
     master_proc = subprocess.Popen(
@@ -142,6 +248,7 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
         stderr=subprocess.STDOUT)
     time.sleep(8)
 
+    # Start AFL slave
     slave_log = run_dir / "afl_slave.log"
     log("starting afl slave...")
     slave_proc = subprocess.Popen(
@@ -152,14 +259,24 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
         stderr=subprocess.STDOUT)
     time.sleep(8)
 
-    qsym_log = run_dir / "qsym.log"
-    log("starting qsym...")
-    qsym_proc = subprocess.Popen(
-        ["run_qsym_afl.py", "-a", "afl-slave",
-         "-o", str(afl_out), "-n", "qsym", "--"] + target_cmd,
-        env=env,
-        stdout=open(str(qsym_log), "w"),
-        stderr=subprocess.STDOUT)
+    # Start QSYM (either with or without watchdog)
+    qsym_proc = None
+    watchdog = None
+    if use_watchdog:
+        log("starting qsym (with watchdog, stale={}s)...".format(watchdog_stale))
+        watchdog = QSYMWatchdog(run_dir, afl_out, target_cmd, env,
+                                stale_seconds=watchdog_stale)
+        watchdog.start()
+        watchdog.start_qsym()
+    else:
+        log("starting qsym (no watchdog)...")
+        qsym_log = run_dir / "qsym.log"
+        qsym_proc = subprocess.Popen(
+            ["run_qsym_afl.py", "-a", "afl-slave",
+             "-o", str(afl_out), "-n", "qsym", "--"] + target_cmd,
+            env=env,
+            stdout=open(str(qsym_log), "w"),
+            stderr=subprocess.STDOUT)
 
     log("running for {} minutes...".format(minutes))
     try:
@@ -168,19 +285,32 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
         log("interrupted by user")
 
     log("stopping processes...")
-    for p in [qsym_proc, slave_proc, master_proc]:
+    stop_flag.set()
+
+    if watchdog is not None:
+        watchdog.stop()
+        watchdog.kill_qsym_tree()
+    if qsym_proc is not None:
+        try:
+            qsym_proc.send_signal(signal.SIGTERM)
+        except Exception:
+            pass
+
+    for p in [slave_proc, master_proc]:
         try:
             p.send_signal(signal.SIGTERM)
         except Exception:
             pass
     time.sleep(3)
-    for p in [qsym_proc, slave_proc, master_proc]:
+    for p in [slave_proc, master_proc]:
         try:
             p.kill()
         except Exception:
             pass
 
-    # Write metadata
+    # Summary
+    restart_count = watchdog.restart_count if watchdog else 0
+
     meta = {
         "program": program,
         "compiler": compiler,
@@ -188,6 +318,9 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
         "repetition": rep,
         "minutes": minutes,
         "checkpoint_hours": sorted(checkpoint_hours),
+        "watchdog_enabled": use_watchdog,
+        "watchdog_stale_seconds": watchdog_stale,
+        "watchdog_restarts": restart_count,
         "start_time": start_sec,
         "finished_at": datetime.utcnow().isoformat() + "Z",
         "target_cmd": target_cmd,
@@ -195,35 +328,39 @@ def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
     with open(str(run_dir / "metadata.json"), "w") as f:
         json.dump(meta, f, indent=2)
 
-    # Summary
     cand = logs_dir / "candidates.csv"
     if cand.exists():
         with open(str(cand)) as f:
             n_cand = sum(1 for _ in f) - 1
         log("=== COMPLETE ===")
         log("candidates: {}".format(n_cand))
+        log("watchdog restarts: {}".format(restart_count))
         log("run dir: {}".format(run_dir))
     else:
         log("=== COMPLETE (no candidates.csv) ===", "WARN")
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("program")
-    parser.add_argument("compiler")
-    parser.add_argument("opt")
-    parser.add_argument("repetition", type=int)
-    parser.add_argument("--minutes", type=int, default=10)
-    parser.add_argument("--checkpoint-hours", default="",
-                        help="Comma-separated hour marks for log snapshots, e.g. 1,6,12")
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("program")
+    ap.add_argument("compiler")
+    ap.add_argument("opt")
+    ap.add_argument("repetition", type=int)
+    ap.add_argument("--minutes", type=int, default=10)
+    ap.add_argument("--checkpoint-hours", default="")
+    ap.add_argument("--watchdog-stale", type=int, default=180,
+                    help="Restart QSYM if log stale for N seconds (default: 180)")
+    ap.add_argument("--no-watchdog", action="store_true",
+                    help="Disable QSYM watchdog (for debugging)")
+    args = ap.parse_args()
 
     ckpts = []
     if args.checkpoint_hours:
         ckpts = [int(h.strip()) for h in args.checkpoint_hours.split(",") if h.strip()]
 
     run_experiment(args.program, args.compiler, args.opt,
-                   args.repetition, args.minutes, ckpts)
+                   args.repetition, args.minutes, ckpts,
+                   args.watchdog_stale, not args.no_watchdog)
 
 
 if __name__ == "__main__":
