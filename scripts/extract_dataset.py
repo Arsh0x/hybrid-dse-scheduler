@@ -3,15 +3,14 @@
 extract_dataset.py — Combine run logs into a single dataset.
 
 Usage:
-    extract_dataset.py [--runs-dir DIR] [--out FILE]
+    extract_dataset.py [--runs-dir DIR] [--out FILE] [--minutes N]
 
-Walks /workspace/runs/*/<compiler>-<opt>/rep-N/, joins candidates.csv
-with solver_timing.csv, writes a single combined CSV.
+--minutes N: only include candidates within the first N minutes of each run.
+             If omitted, include everything.
 """
 
 import argparse
 import csv
-import json
 import sys
 from pathlib import Path
 
@@ -40,8 +39,18 @@ def log(msg, level="INFO"):
     print("[{}] {}".format(level, msg), flush=True)
 
 
+def read_start_time(run_dir):
+    p = run_dir / "start_time.txt"
+    if not p.exists():
+        return None
+    try:
+        with open(str(p)) as f:
+            return float(f.read().strip())
+    except Exception:
+        return None
+
+
 def load_solver_timing(path):
-    """Return list of solver rows sorted by timestamp."""
     if not path.exists():
         return []
     rows = []
@@ -54,7 +63,6 @@ def load_solver_timing(path):
 
 
 def find_solver_outcome(solver_rows, branch_id, cand_ts, window_us=100000):
-    """Find solver outcome for this branch near the candidate timestamp."""
     best = None
     best_delta = None
     for s in solver_rows:
@@ -67,13 +75,14 @@ def find_solver_outcome(solver_rows, branch_id, cand_ts, window_us=100000):
     return best
 
 
-def extract_run(run_dir, program, compiler, opt, rep):
+def extract_run(run_dir, program, compiler, opt, rep, cutoff_us):
     """Yield combined rows for one run."""
-    cand_path = run_dir / "candidates.csv"
-    solver_path = run_dir / "solver_timing.csv"
+    logs_dir = run_dir / "logs"
+    cand_path = logs_dir / "candidates.csv"
+    solver_path = logs_dir / "solver_timing.csv"
 
     if not cand_path.exists():
-        log("no candidates.csv in {}".format(run_dir), "WARN")
+        log("no candidates.csv in {}".format(logs_dir), "WARN")
         return
 
     solver_rows = load_solver_timing(solver_path)
@@ -82,6 +91,10 @@ def extract_run(run_dir, program, compiler, opt, rep):
     with open(str(cand_path)) as f:
         r = csv.DictReader(f)
         for c in r:
+            ts = int(c["timestamp_us"])
+            if cutoff_us is not None and ts > cutoff_us:
+                continue
+
             row = {
                 "run_id": run_id,
                 "program": program,
@@ -97,10 +110,8 @@ def extract_run(run_dir, program, compiler, opt, rep):
             for col in FEATURE_COLS:
                 row[col] = c.get(col, "")
 
-            # Attach solver outcome if interesting
             if c["is_interesting"] == "1":
-                outcome = find_solver_outcome(
-                    solver_rows, c["branch_id"], int(c["timestamp_us"]))
+                outcome = find_solver_outcome(solver_rows, c["branch_id"], ts)
                 if outcome:
                     row["solver_result"] = outcome["result"]
                     row["solver_time_us"] = outcome["elapsed_us"]
@@ -115,7 +126,6 @@ def extract_run(run_dir, program, compiler, opt, rep):
 
 
 def walk_runs(runs_dir):
-    """Yield (run_dir, program, compiler, opt, rep) tuples."""
     if not runs_dir.exists():
         log("runs dir not found: {}".format(runs_dir), "ERROR")
         return
@@ -125,7 +135,6 @@ def walk_runs(runs_dir):
         for cfg_dir in sorted(prog_dir.iterdir()):
             if not cfg_dir.is_dir():
                 continue
-            # cfg_dir name is like gcc-O2
             parts = cfg_dir.name.rsplit("-", 1)
             if len(parts) != 2:
                 continue
@@ -144,6 +153,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--runs-dir", default=str(DEFAULT_RUNS))
     ap.add_argument("--out", default=str(DEFAULT_OUT))
+    ap.add_argument("--minutes", type=int, default=None,
+                    help="Only include first N minutes of each run")
     args = ap.parse_args()
 
     runs_dir = Path(args.runs_dir)
@@ -156,12 +167,20 @@ def main():
         w.writeheader()
 
         for run_dir, program, compiler, opt, rep in walk_runs(runs_dir):
+            start = read_start_time(run_dir)
+            if args.minutes is not None and start is not None:
+                cutoff_us = int((start + args.minutes * 60) * 1e6)
+            else:
+                cutoff_us = None
+
             count = 0
-            for row in extract_run(run_dir, program, compiler, opt, rep):
+            for row in extract_run(run_dir, program, compiler, opt, rep, cutoff_us):
                 w.writerow(row)
                 count += 1
             if count > 0:
-                log("{} rows from {}".format(count, run_dir))
+                label = "{} (cutoff {}min)".format(run_dir, args.minutes) \
+                    if args.minutes else str(run_dir)
+                log("{} rows from {}".format(count, label))
             total += count
 
     log("=== DONE ===")

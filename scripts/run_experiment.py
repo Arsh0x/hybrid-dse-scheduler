@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 run_experiment.py — Run a hybrid fuzzing experiment.
+
+Usage:
+    run_experiment.py <program> <compiler> <opt> <repetition> [--minutes N] [--checkpoint-hours 1,6,12]
 """
 
 import argparse
@@ -10,6 +13,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import threading
 import time
 from datetime import datetime
 from pathlib import Path
@@ -17,8 +21,6 @@ from pathlib import Path
 WORKSPACE = Path("/workspace")
 BUILDS_DIR = WORKSPACE / "builds"
 RUNS_DIR = WORKSPACE / "runs"
-LOGS_DIR = WORKSPACE / "logs"
-STATE_DIR = WORKSPACE / "state"
 
 
 def log(msg, level="INFO"):
@@ -30,24 +32,18 @@ def die(msg):
     sys.exit(1)
 
 
-def setup_environment():
+def setup_environment(run_logs_dir):
     env = os.environ.copy()
     env["PATH"] = env.get("PATH", "") + ":/afl:/workdir/qsym/bin"
     env["AFL_SKIP_CPUFREQ"] = "1"
     env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
     env["AFL_NO_AFFINITY"] = "1"
     env["AFL_PATH"] = "/afl"
+    # Per-run QSYM log paths (avoids collisions between parallel runs)
+    env["QSYM_LOG_FILE"] = str(run_logs_dir / "solver_timing.csv")
+    env["QSYM_CANDIDATE_LOG"] = str(run_logs_dir / "candidates.csv")
+    env["QSYM_HISTORY_FILE"] = str(run_logs_dir / "branch_history.csv")
     return env
-
-
-def cleanup_previous_logs():
-    for f in ["candidates.csv", "solver_timing.csv"]:
-        p = LOGS_DIR / f
-        if p.exists():
-            p.unlink()
-    h = STATE_DIR / "branch_history.csv"
-    if h.exists():
-        h.unlink()
 
 
 def get_build_dir(program, compiler, opt):
@@ -80,10 +76,36 @@ def prepare_run_dir(program, compiler, opt, rep):
     run_dir.mkdir(parents=True)
     afl_out = run_dir / "afl-out"
     afl_out.mkdir()
-    return run_dir, afl_out
+    logs_dir = run_dir / "logs"
+    logs_dir.mkdir()
+    return run_dir, afl_out, logs_dir
 
 
-def run_experiment(program, compiler, opt, rep, minutes, env):
+def checkpoint_worker(run_dir, logs_dir, total_minutes, checkpoint_hours):
+    """Background thread that snapshots logs at specified hour marks."""
+    start = time.time()
+    for hour in sorted(checkpoint_hours):
+        target_sec = hour * 3600
+        if target_sec > total_minutes * 60:
+            continue
+        sleep_secs = target_sec - (time.time() - start)
+        if sleep_secs > 0:
+            time.sleep(sleep_secs)
+        cp_dir = run_dir / "checkpoints" / "{}h".format(hour)
+        cp_dir.mkdir(parents=True, exist_ok=True)
+        for f in ["candidates.csv", "solver_timing.csv", "branch_history.csv"]:
+            src = logs_dir / f
+            if src.exists():
+                try:
+                    shutil.copy(str(src), str(cp_dir / f))
+                except Exception as e:
+                    log("checkpoint copy failed: {}".format(e), "WARN")
+        with open(str(cp_dir / "checkpoint.txt"), "w") as f:
+            f.write("hour={} wall_time={}\n".format(hour, time.time()))
+        log("checkpoint {}h saved to {}".format(hour, cp_dir))
+
+
+def run_experiment(program, compiler, opt, rep, minutes, checkpoint_hours):
     binary, args, uses_stdin = get_target_cmd(program, compiler, opt)
     if uses_stdin:
         target_cmd = [binary] + args
@@ -91,12 +113,24 @@ def run_experiment(program, compiler, opt, rep, minutes, env):
         target_cmd = [binary] + args + ["@@"]
     log("target: {}".format(" ".join(target_cmd)))
 
-    run_dir, afl_out = prepare_run_dir(program, compiler, opt, rep)
+    run_dir, afl_out, logs_dir = prepare_run_dir(program, compiler, opt, rep)
+    env = setup_environment(logs_dir)
     seeds_dir = get_build_dir(program, compiler, opt) / "seeds"
     if not seeds_dir.exists() or not any(seeds_dir.iterdir()):
         die("no seeds at {}".format(seeds_dir))
 
-    cleanup_previous_logs()
+    # Write start_time.txt for later filtering
+    start_sec = time.time()
+    with open(str(run_dir / "start_time.txt"), "w") as f:
+        f.write("{}\n".format(start_sec))
+
+    # Start checkpoint thread
+    if checkpoint_hours:
+        t = threading.Thread(target=checkpoint_worker,
+                             args=(run_dir, logs_dir, minutes, checkpoint_hours))
+        t.daemon = True
+        t.start()
+        log("checkpoint hours: {}".format(sorted(checkpoint_hours)))
 
     master_log = run_dir / "afl_master.log"
     log("starting afl master...")
@@ -146,30 +180,23 @@ def run_experiment(program, compiler, opt, rep, minutes, env):
         except Exception:
             pass
 
-    log("copying logs...")
-    for f in ["candidates.csv", "solver_timing.csv"]:
-        src = LOGS_DIR / f
-        if src.exists():
-            shutil.copy(str(src), str(run_dir / f))
-        else:
-            log("warning: {} not found".format(src), "WARN")
-    h = STATE_DIR / "branch_history.csv"
-    if h.exists():
-        shutil.copy(str(h), str(run_dir / "branch_history.csv"))
-
+    # Write metadata
     meta = {
         "program": program,
         "compiler": compiler,
         "opt": opt,
         "repetition": rep,
         "minutes": minutes,
+        "checkpoint_hours": sorted(checkpoint_hours),
+        "start_time": start_sec,
         "finished_at": datetime.utcnow().isoformat() + "Z",
         "target_cmd": target_cmd,
     }
     with open(str(run_dir / "metadata.json"), "w") as f:
         json.dump(meta, f, indent=2)
 
-    cand = run_dir / "candidates.csv"
+    # Summary
+    cand = logs_dir / "candidates.csv"
     if cand.exists():
         with open(str(cand)) as f:
             n_cand = sum(1 for _ in f) - 1
@@ -187,10 +214,16 @@ def main():
     parser.add_argument("opt")
     parser.add_argument("repetition", type=int)
     parser.add_argument("--minutes", type=int, default=10)
+    parser.add_argument("--checkpoint-hours", default="",
+                        help="Comma-separated hour marks for log snapshots, e.g. 1,6,12")
     args = parser.parse_args()
-    env = setup_environment()
+
+    ckpts = []
+    if args.checkpoint_hours:
+        ckpts = [int(h.strip()) for h in args.checkpoint_hours.split(",") if h.strip()]
+
     run_experiment(args.program, args.compiler, args.opt,
-                   args.repetition, args.minutes, env)
+                   args.repetition, args.minutes, ckpts)
 
 
 if __name__ == "__main__":
