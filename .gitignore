@@ -1,10 +1,31 @@
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+# Raw runs and datasets (huge)
+baseline/runs/**/afl-out/
+baseline/runs/**/logs/
+baseline/runs/**/*.log
+baseline/runs/**/checkpoints/
+data/raw/
+data/processed/
+data/state/
+data/milestone_6c/
+
+# Build artifacts
+builds/
 *.o
 *.so
-build/
+*.a
+
+# Python
 __pycache__/
 *.pyc
 .venv/
+venv/
+
+# Temp
+/tmp/
+*.tmp
+
+# Keep these tracked:
+!baseline/runs/*/dataset/*.csv
+!baseline/runs/**/metadata.json
+!baseline/runs/**/start_time.txt
+!baseline/runs/**/qsym_restarts.log

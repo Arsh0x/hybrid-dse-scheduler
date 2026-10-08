@@ -464,3 +464,38 @@ including the stuck PIN process.
 
 ### Next
 Cloud migration with watchdog fix in place.
+
+## 2026-10-09 — Critical Fix: Per-Module Branch IDs
+
+### Bug Discovered
+The original branch_id scheme used a single global cache for build_id.
+For dynamic binaries (libpng, bzip2), the first branch processed was often
+in libc, so the cache was set to libc's hash. This caused all subsequent
+branches from any module to be tagged with libc's hash.
+
+Result: libpng and bzip2 branches appeared to share the same build_id,
+which confounded cross-program analysis.
+
+### Fix
+Replaced single-hash caching with per-module caching keyed on IMG low
+address. Each module (main exe, libc, ld-linux, etc.) now gets its own
+build_id computed once per PIN process.
+
+### Validation
+After fix, 2-minute runs produce:
+- zlib (static):  1 prefix (minigzip only)
+- bzip2 (dynamic): 2 prefixes (bzip2 main + libc)
+- libpng (dynamic): 2 prefixes (libpng main + libc)
+- libc prefix consistent across bzip2 and libpng (same library)
+- main program prefix unique per program
+
+### Impact on Prior Data
+All dynamic-binary data collected before this fix (libpng 6h-overnight,
+libpng 5c-6c runs, bzip2 test) has libc-tagged branch IDs. Cross-program
+AUROC numbers from milestone 6c are partially measuring libc generalization
+rather than target-program generalization.
+
+### Next
+Re-collect data for libpng (and other dynamic programs) with the fix
+before final paper submission. zlib data unaffected (static).
+
