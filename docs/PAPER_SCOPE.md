@@ -6,14 +6,19 @@
 
 ---
 
-## 1. Thesis
+## 1. Thesis (updated 2026-10-10)
 
-> For ML-based DSE scheduling in binary hybrid fuzzing, structural and
-> history features generalize across programs, compilers, and optimization
-> levels; symbolic and optimization-shaped features do not. This paper
-> establishes which feature families are usable for cross-program models
-> and which are not, with an evidence-backed interpretation of failure
-> modes and a reusable evaluation methodology.
+> For ML-based DSE scheduling in binary hybrid fuzzing, structural
+> (`path_length`) and frequency (`branch_hit_count`) features generalize
+> bidirectionally across programs with high and stable AUROC (mean 0.87-0.94,
+> std <= 0.016 over 5 repetitions). Symbolic features
+> (`constraint_count`, `symbolized_bytes`) are directionally unstable
+> (std 0.17). Optimization-shaped, history-outcome, and instruction-mix
+> families perform at or below random chance across all repetitions.
+
+This thesis is now supported by 5-repetition empirical evidence with
+per-module branch identification, main-executable-only filtering, and
+rigorous NaN-safe cross-program AUROC analysis.
 
 ---
 
