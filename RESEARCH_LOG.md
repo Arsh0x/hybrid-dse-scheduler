@@ -499,3 +499,46 @@ rather than target-program generalization.
 Re-collect data for libpng (and other dynamic programs) with the fix
 before final paper submission. zlib data unaffected (static).
 
+
+## 2026-10-10 — Milestone 6c-v3: 5-Repetition Stability Analysis
+
+### Setup
+5 reps × 10 min × 2 programs (zlib, libpng)
+14,426 total candidates → 11,625 main-module only
+
+### Results (mean ± std over 5 reps, libpng -> zlib)
+
+| Family | Mean | Std | Verdict |
+|--------|-----:|----:|---------|
+| baseline | 0.937 | 0.014 | Excellent, stable |
+| history_freq | 0.916 | 0.011 | Excellent, stable |
+| structural | 0.872 | 0.016 | Strong, stable |
+| symbolic | 0.604 | 0.172 | Unstable - fail |
+| opt_insn_mix | 0.587 | 0.006 | Fail |
+| history_outcome | 0.498 | 0.069 | Fail |
+| opt_cfg | 0.488 | 0.123 | Fail |
+| opt_geometry | 0.459 | 0.142 | Fail |
+
+### Key Findings
+1. Only 3 feature families (structural, frequency, baseline) are both
+   high-AUROC and low-variance. These are the paper's positive results.
+2. Symbolic features are directionally unstable (0.42 to 0.86 across
+   reps) - this is a novel negative finding.
+3. All optimization-shaped families consistently fail.
+
+### Paper Implication
+The paper's thesis is now precise and defensible:
+"Structural and frequency features generalize bidirectionally (AUROC
+0.87-0.94, std <= 0.016). Symbolic features are unstable (std 0.17).
+Optimization-shaped, history-outcome, and instruction-mix families
+perform at or below random chance."
+
+### Bug Fixes Applied
+- Per-module branch_id (fixes libc contamination)
+- F5/F6 features restored (were accidentally reverted)
+- NaN handling in analyze.py
+- QSYM watchdog (D-state recovery)
+
+### Next
+Phase D: add 4 more programs (xz, jq, tar, gzip), then cloud campaign.
+

@@ -47,54 +47,50 @@ void initSolverLogIfNeeded() {
   }
 }
 
-std::string g_build_id_cache;
-bool g_build_id_initialized = false;
 
-std::string computeBuildIdForPc(uint64_t pc) {
-  PIN_LockClient();
-  IMG img = IMG_FindByAddress(pc);
-  if (!IMG_Valid(img)) {
-    PIN_UnlockClient();
-    return "unknown";
-  }
-  std::string path = IMG_Name(img);
-  PIN_UnlockClient();
+std::map<uint64_t, std::string> g_module_build_id_cache;
 
-  FILE* f = fopen(path.c_str(), "rb");
-  if (!f) return "unknown";
-  uint64_t h = 1469598103934665603ULL;
-  unsigned char buf[4096];
-  size_t n;
-  while ((n = fread(buf, 1, sizeof(buf), f)) > 0) {
-    for (size_t i = 0; i < n; i++) {
-      h ^= buf[i];
-      h *= 1099511628211ULL;
+std::string getModuleBuildId(IMG img) {
+  if (!IMG_Valid(img)) return "unknown";
+  uint64_t img_low = IMG_LowAddress(img);
+  std::map<uint64_t, std::string>::iterator it = g_module_build_id_cache.find(img_low);
+  if (it != g_module_build_id_cache.end()) return it->second;
+  std::string mpath = IMG_Name(img);
+  std::string bid = "unknown";
+  FILE* f = fopen(mpath.c_str(), "rb");
+  if (f) {
+    uint64_t h = 1469598103934665603ULL;
+    unsigned char buf[4096];
+    size_t n;
+    while ((n = fread(buf, 1, sizeof(buf), f)) > 0) {
+      for (size_t i = 0; i < n; i++) {
+        h ^= buf[i];
+        h *= 1099511628211ULL;
+      }
     }
+    fclose(f);
+    char out[32];
+    snprintf(out, sizeof(out), "%016lx", (unsigned long)h);
+    bid = std::string(out);
   }
-  fclose(f);
-  char out[32];
-  snprintf(out, sizeof(out), "%016lx", (unsigned long)h);
-  return std::string(out);
+  g_module_build_id_cache[img_low] = bid;
+  return bid;
 }
 
 std::string getBranchId(uint64_t pc) {
-  if (!g_build_id_initialized) {
-    g_build_id_cache = computeBuildIdForPc(pc);
-    g_build_id_initialized = true;
-  }
   PIN_LockClient();
   IMG img = IMG_FindByAddress(pc);
   if (!IMG_Valid(img)) {
     PIN_UnlockClient();
-    return g_build_id_cache + ":unknown";
+    return "unknown:0x0";
   }
   uint64_t base = IMG_LowAddress(img);
   uint64_t offset = pc - base;
   PIN_UnlockClient();
-
+  std::string module_bid = getModuleBuildId(img);
   char buf[32];
   snprintf(buf, sizeof(buf), ":0x%lx", (unsigned long)offset);
-  return g_build_id_cache + buf;
+  return module_bid + buf;
 }
 
 FILE* g_candidate_log = nullptr;
